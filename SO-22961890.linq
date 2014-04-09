@@ -15,7 +15,7 @@ async void Main()
 
 private IEnumerable<Product> GetProducts()
 {
-	return Enumerable.Range(11, 20).Select(i => new Product()
+	return Enumerable.Range(1, 10).Select(i => new Product()
 	{
 		Id = i
 	}).ToArray();
@@ -23,7 +23,7 @@ private IEnumerable<Product> GetProducts()
 
 private IEnumerable<Product> GetBrochures()
 {
-	return Enumerable.Range(11, 20).Select(i => new Product()
+	return Enumerable.Range(11, 10).Select(i => new Product()
 	{
 		Id = i
 	}).ToArray();
