@@ -4,11 +4,11 @@
   <Namespace>System.Threading.Tasks</Namespace>
 </Query>
 
-void Main()
+async void Main()
 {
 	var searchProducts = Task.Factory.StartNew(() => GetProducts());
 	var searchBrochure = Task.Factory.StartNew(() => GetBrochures());
-	var all = Task.WhenAll(new [] { searchProducts, searchBrochure });
+	var all = await Task.WhenAll(new [] { searchProducts, searchBrochure });
 	
 	all.Dump();
 }
