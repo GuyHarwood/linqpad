@@ -3,7 +3,11 @@
 void Main()
 {
 	long bytes = 1073278976;
-	FormatBytes(bytes).Dump();
+	
+	var result = bytes / 1024.0 / 1024.0 / 1024.0;
+	
+	Math.Round(result,0).Dump("Manual");
+	FormatBytes(bytes).Dump("FormatBytes");
 }
 
 private static string FormatBytes(long bytes)
